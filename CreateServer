@@ -1,0 +1,23 @@
+//server instantiate//crete own server
+const express=require("express");
+const app=express();
+
+//activate the server on the 3000 port
+app.listen(3001,()=>{
+    console.log("App is running successfully");
+});
+// app.get('/',(req,res)=>{
+//     res.send("hello jee");
+// })
+//routes
+app.get('/',(req,res)=>{
+    res.send("hii ");
+})
+
+
+app.post('/api/cars ',(request,response)=>{
+    const{name ,brand}=request.body;
+    console.log(name);
+    console.log(brand);
+    response.send("Car submitted successfully");
+});
