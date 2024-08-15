@@ -1,0 +1,17 @@
+Terminate the Process:
+
+Run the following command to kill the process with PID 1792:
+
+sh
+Copy code
+taskkill /PID 1792 /F
+This command forces the process to terminate, freeing up port 8000.
+
+Verify Port is Free:
+
+Run netstat again to ensure that port 8000 is no longer in use:
+
+sh
+Copy code
+netstat -ano | findstr :8000
+If the port is free, the command should not show any results.
